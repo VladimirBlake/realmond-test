@@ -6,11 +6,18 @@ import { useState } from "react";
 
 export default function Home() {
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [haveSearched, setHaveSearched] = useState(false);
   return (
     <div className="mt-36 px-5">
       <div className="container mx-auto">
-        <SearchForm setSearchResults={setSearchResults} />
-        <SearchResults searchResults={searchResults} />
+        <SearchForm
+          setHaveSearched={setHaveSearched}
+          setSearchResults={setSearchResults}
+        />
+        <SearchResults
+          haveSearched={haveSearched}
+          searchResults={searchResults}
+        />
       </div>
     </div>
   );

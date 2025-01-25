@@ -7,13 +7,17 @@ import { handleSearchSubmit } from "../helpers/handleSearchSubmit";
 
 export default function SearchForm({
   setSearchResults,
+  setHaveSearched,
 }: {
   setSearchResults: Dispatch<SetStateAction<SearchResult[]>>;
+  setHaveSearched: Dispatch<SetStateAction<boolean>>;
 }) {
   const [searchValue, setSearchValue] = useState("");
   return (
     <form
-      onSubmit={(e) => handleSearchSubmit(e, searchValue, setSearchResults)}
+      onSubmit={(e) =>
+        handleSearchSubmit(e, searchValue, setSearchResults, setHaveSearched)
+      }
     >
       <ApplicationHeading />
       <SearchInput
