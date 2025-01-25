@@ -3,4 +3,5 @@ export interface SearchResult {
   trackName: string;
   artistName: string;
   artworkUrl60: string;
+  collectionName: string;
 }

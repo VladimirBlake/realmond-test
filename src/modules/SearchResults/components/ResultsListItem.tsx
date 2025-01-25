@@ -28,7 +28,11 @@ export default function ResultsListItem({
           <Typography level="title-sm">{searchResult.artistName}</Typography>
         </div>
         <div className="mt-1">
-          <Typography level="title-lg">{searchResult.trackName}</Typography>
+          <Typography level="title-lg">
+            {searchResult.trackName
+              ? searchResult.trackName
+              : searchResult.collectionName}
+          </Typography>
         </div>
       </ListItemContent>
     </ListItem>
