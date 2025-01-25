@@ -16,6 +16,7 @@ export async function searchOnITunes(
           wrapperType: res.wrapperType,
           artistName: res.artistName,
           trackName: res.trackName,
+          artworkUrl60: res?.artworkUrl60 ?? "-",
         };
       }
     );
@@ -26,6 +27,7 @@ export async function searchOnITunes(
         wrapperType: "Book",
         trackName: "Book #123",
         artistName: "Bob Ross",
+        artworkUrl60: "-",
       },
     ];
   }

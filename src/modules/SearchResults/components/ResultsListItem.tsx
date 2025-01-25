@@ -16,7 +16,11 @@ export default function ResultsListItem({
   return (
     <ListItem sx={{ padding: "10px" }} variant="outlined">
       <ListItemDecorator>
-        <Avatar>AB</Avatar>
+        {searchResult.artworkUrl60 === "-" ? (
+          <Avatar>-</Avatar>
+        ) : (
+          <Avatar src={searchResult.artworkUrl60}></Avatar>
+        )}
       </ListItemDecorator>
       <ListItemContent sx={{ marginLeft: "8px" }}>
         <div className="flex items-center gap-3">
