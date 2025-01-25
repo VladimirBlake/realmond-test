@@ -1,5 +1,5 @@
 export interface SearchResult {
-  kind: string;
+  wrapperType: string;
   trackName: string;
   artistName: string;
 }

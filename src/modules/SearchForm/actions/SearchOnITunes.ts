@@ -13,7 +13,7 @@ export async function searchOnITunes(
     const returnObject: SearchResult[] = resultsJson.results.map(
       (res: SearchResult) => {
         return {
-          kind: res.kind,
+          wrapperType: res.wrapperType,
           artistName: res.artistName,
           trackName: res.trackName,
         };
@@ -23,7 +23,7 @@ export async function searchOnITunes(
   } catch {
     return [
       {
-        kind: "Book",
+        wrapperType: "Book",
         trackName: "Book #123",
         artistName: "Bob Ross",
       },

@@ -20,7 +20,7 @@ export default function ResultsListItem({
       </ListItemDecorator>
       <ListItemContent sx={{ marginLeft: "8px" }}>
         <div className="flex items-center gap-3">
-          <Chip color="primary">{searchResult.kind}</Chip>
+          <Chip color="primary">{searchResult.wrapperType}</Chip>
           <Typography level="title-sm">{searchResult.artistName}</Typography>
         </div>
         <div className="mt-1">
